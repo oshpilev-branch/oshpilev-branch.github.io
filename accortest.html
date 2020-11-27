@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-<!doctype html>
-<html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
@@ -16,25 +12,35 @@
 </head>
 <body>
 
-	    <button onclick="launchBranchJourney()" onmouseover="" style="">Launch Banner</button>
-</body>
-</html>
-</head>
-<body>
-
-<h1>Hello</h1>
-
-<h2>Deeplink No Attribution Link</h2>
-<a href="https://oleg.app.link/9CirH28UKbb">Onboarding</a>
+<h1>Accor Test</h1>
 
 
-<p>My first paragraph.</p>
+
+<h2>Continue in app</h2>
+<a href="https://psmaster.test-app.link/tester">Branch Link</a>
+
+<br />
+<br />
+
+<h2>Register on web</h2>
+<button onclick="Register()">Register</button>
+
+
 <script>
 	
-	function launchBranchJourney(){
-        branch.track('pageview');
-    }
+
+	function Register(){
+
+		branch.logEvent(
+		    Register,
+		    custom_data,
+		    callback (err)
+		);
+
+	}
+
 </script>
+
 
 </body>
 </html>
