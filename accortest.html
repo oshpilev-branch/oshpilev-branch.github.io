@@ -31,11 +31,32 @@
 
 	function Register(){
 
+
+		var event_data = {
+   "currency": "GBP",
+   "revenue": 180.2
+};
+
+/*
+var custom_data = {
+   "Custom_Event_Property_Key1": "Custom_Event_Property_val1",
+   "Custom_Event_Property_Key2": "Custom_Event_Property_val2"
+};
+*/
 		branch.logEvent(
-		    Register,
-		    custom_data,
-		    callback (err)
+		    "Paymment Sent",
+		    event_data,
+//		    custom_data,
+		    function(err) { console.log(err); }
 		);
+
+/*
+		branch.logEvent(
+   "COMPLETE_REGISTRATION",
+   function(err) { console.log(err); }
+);
+
+		*/
 
 	}
 
