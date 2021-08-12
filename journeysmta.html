@@ -209,7 +209,7 @@
     }
 
     // function to create a link via the web SDK
-    function createLink(){
+    window.onload =  function createLink(){
         branch.link({
             campaign: 'dynamic_site_link',
             feature: 'Web SDK',
@@ -227,8 +227,6 @@
             console.log(err, link); 
         });
     }
- 	window.onload = function createLink() {
-        }
 
     </script>
 
