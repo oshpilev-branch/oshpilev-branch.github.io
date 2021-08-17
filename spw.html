@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style type="text/css">
-.button {
-    position: fixed;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100px; /* width of button */
-    height: 30px; /* height of button */
+<head><style type="text/css">
+	.btn-text {
+    vertical-align: middle;
+    font-family: 'Corben';
+    font-size: 580%;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    padding: 20%;
 }
 </style></head>
 <body>
+<script>
+	const urlSearchParams = new URLSearchParams(window.location.search);
+	const params = Object.fromEntries(urlSearchParams.entries());
+	alert("Results are: " + params);
+    //function getURL() {
+    //		const queryString = window.location.search;
+	//		const urlParams = new URLSearchParams(queryString);
+	//		const campaign = urlParams.get('utm_campaign');
+	//		const channel = urlParams.get('utm_source');
+	//		const GCLID = urlParams.get('gclid');
+    //    	alert("The URL of this page is: " + window.location.href);
+    //}
+ </script>
 
 <h1>Parameter Carryover Testing</h1>
 
 <body>
-<a href="psmaster.app.link/?" class="button">Go to App</a>
+  <div class="wrapper">
+    <div class="btn btn-large btn-primary" id="oujh-button">
+      <div class="btn-text">BUTTON</div>
+    </div>
+  </div>
 </body>
 
 
