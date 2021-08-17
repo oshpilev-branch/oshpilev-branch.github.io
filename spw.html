@@ -15,29 +15,24 @@
 <script>
 	const url = new URLSearchParams(window.location.search);
 	const str = String(url);
-	//const params = urlSearchParams.get('~campaign');
-	//alert("Result is: " + urlSearchParams);
-	//var regex = s.match(/(?<=cow\s+).*?(?=\s+milk)/gs); 
 	var test = str.split('%243p').pop().split('&_branch_match_id')[0];
-	//var mySubString = str.urlSearchParams(
-    	//	str.lastIndexOf("%243p") + 1, 
-    	//	str.lastIndexOf("&_branch_match_id")
-//);
-	alert("Result is: " + test);
-    //function getURL() {
-    //		const queryString = window.location.search;
-	//		const urlParams = new URLSearchParams(queryString);
-	//		const campaign = urlParams.get('utm_campaign');
-	//		const channel = urlParams.get('utm_source');
-	//		const GCLID = urlParams.get('gclid');
-    //    	alert("The URL of this page is: " + window.location.href);
-    //}
+	
+	document.getElementById('generate').onload = function() {
+    	var a = document.createElement('a');
+    	a.href = 'https://psmaster.app.link/?%243p' + test;
+    	a.innerText = 'Go to App';
+ 
+}
+
+	//alert("Result is: " + test);
+
  </script>
 
 <h1>Parameter Carryover Testing</h1>
 
 <body>
-<a href="https://psmaster.app.link/?%243p" class="button">Go to App</a>
+<!--<a href="https://psmaster.app.link/?%243p" class="button">Go to App</a>-->
+     <div id="container"></div>
 </body>
 
 
