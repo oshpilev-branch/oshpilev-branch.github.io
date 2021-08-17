@@ -14,9 +14,13 @@
 <body>
 <script>
 	const urlSearchParams = new URLSearchParams(window.location.search);
-	const params = urlSearchParams.get('~campaign');
-	alert("Result is: " + params);
+	//const params = urlSearchParams.get('~campaign');
 	alert("Result is: " + urlSearchParams);
+	var mySubString = str.urlSearchParams(
+    		str.lastIndexOf("%243p") + 1, 
+    		str.lastIndexOf("&_branch_match_id")
+);
+	alert("Result is: " + mySubString);
     //function getURL() {
     //		const queryString = window.location.search;
 	//		const urlParams = new URLSearchParams(queryString);
@@ -30,7 +34,7 @@
 <h1>Parameter Carryover Testing</h1>
 
 <body>
-<a href="https://psmaster.app.link/?" class="button">Go to App</a>
+<a href="https://psmaster.app.link/?%243p" class="button">Go to App</a>
 </body>
 
 
