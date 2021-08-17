@@ -17,11 +17,12 @@
 	//const params = urlSearchParams.get('~campaign');
 	//alert("Result is: " + urlSearchParams);
 	//var regex = s.match(/(?<=cow\s+).*?(?=\s+milk)/gs); 
-	var mySubString = str.urlSearchParams(
-    		str.lastIndexOf("%243p") + 1, 
-    		str.lastIndexOf("&_branch_match_id")
-);
-	alert("Result is: " + mySubString);
+	var test = str.split('%243p').pop().split('&_branch_match_id')[0];
+	//var mySubString = str.urlSearchParams(
+    	//	str.lastIndexOf("%243p") + 1, 
+    	//	str.lastIndexOf("&_branch_match_id")
+//);
+	alert("Result is: " + test);
     //function getURL() {
     //		const queryString = window.location.search;
 	//		const urlParams = new URLSearchParams(queryString);
