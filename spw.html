@@ -17,6 +17,8 @@
 	const str = String(url);
 	var test = str.split('%243p').pop().split('&_branch_match_id')[0];
 	
+	var fullurl = "https://psmaster.app.link/?%243p" + test;
+	
 	//document.getElementById('generate').onload = function() {
     	//var a = document.createElement('a');
     	//a.href = 'https://psmaster.app.link/?%243p' + test;
@@ -31,8 +33,12 @@
 <h1>Parameter Carryover Testing</h1>
 
 <body>
-<a href="https://psmaster.app.link/?%243p" class="button">Go to App</a>
-    <!-- <div id="container"></div>-->
+<!--<a href="https://psmaster.app.link/?%243p" class="button">Go to App</a>-->
+<a href="" id="fullurl">Go to App</a>
+<script>
+document.getElementById("fullurl").href = fullurl;
+</script>
+
 </body>
 
 
