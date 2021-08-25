@@ -22,22 +22,27 @@
 	{	
 		//split out the value between 3p and branch_match_id
 		var params = str.split('%243p').pop().split('&_branch_match_id')[0];
-		// built a link
+		// build a link
 		var fullurl = "https://branchster.app.link/?%243p" + params;
 	} 
+	// for cases where _branch_match_id is last
 	else if (str.indexOf("&_branch_match_id") >= 0)
 	{
 		//split out the value between ? and branch_match_id
 		var params = str.split('?').pop().split('&_branch_match_id')[0];
-		// built a link
+		// build a link
 		var fullurl = "https://branchster.app.link/?" + params;	
 	} 
+	// for cases where _branch_match_id is first
 	else if (str.indexOf("_branch_match_id") >= 0)
 	{
 		//split out the value between ? and branch_match_id
-		var params = str.split('_branch_match_id');
-		// built a link
-		var fullurl = "https://branchster.app.link/?" + params;
+		const campaign = url.get('utm_campaign');
+		const channel = url.get('utm_channel'); 
+		const medium = url.get('utm_medium');
+		//var params = str.split('_branch_match_id');
+		// build a link
+		var fullurl = "https://branchster.app.link/?utm_campaign" + campaign + "&utm_channel=" + channel + "&utm_medium=" + medium;
 	}
 	else 
 	{
