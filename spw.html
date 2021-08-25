@@ -17,18 +17,18 @@
 <script>
 	const url = new URLSearchParams(window.location.search);
 	const str = String(url);
-	var test = str.split('%243p').pop().split('&_branch_match_id')[0];
 	
-	var fullurl = "https://branchster.app.link/?%243p" + test;
-	
-	//document.getElementById('generate').onload = function() {
-    	//var a = document.createElement('a');
-    	//a.href = 'https://psmaster.app.link/?%243p' + test;
-    	//a.innerText = 'Go to App';
- 
-//}
+	if  (str.indexOf("&_branch_match_id") >= 0)
+	{	
+		//split out the value between 3p and branch_match_id
+		var test = str.split('%243p').pop().split('&_branch_match_id')[0];
+		// built a link
+		var fullurl = "https://branchster.app.link/?%243p" + test;
+	} else
+	{
+		var fullurl = "https://branchster.app.link/?~campaign=organic";
+	}
 
-//	alert("Result is: " + test);
 
  </script>
 
