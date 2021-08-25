@@ -35,7 +35,7 @@
 	else if (str.indexOf("_branch_match_id") >= 0)
 	{
 		//split out the value between ? and branch_match_id
-		var params = str.split('?_branch_match_id').pop().split('')[0];
+		var params = str.split('?_branch_match_id');
 		// built a link
 		var fullurl = "https://branchster.app.link/?" + params;
 	}
