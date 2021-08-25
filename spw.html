@@ -25,13 +25,13 @@
 		// built a link
 		var fullurl = "https://branchster.app.link/?%243p" + params;
 	} 
-	//else if (str.indexOf("&_branch_match_id") >= 0)
-	//{
+	else if (str.indexOf("&_branch_match_id") >= 0)
+	{
 		//split out the value between ? and branch_match_id
-	//	var params = str.split('?').pop().split('&_branch_match_id')[0];
+		var params = str.split('?').pop().split('&_branch_match_id')[0];
 		// built a link
-	//	var fullurl = "https://branchster.app.link/?" + params;	
-	//} 
+		var fullurl = "https://branchster.app.link/?" + params;	
+	} 
 	else
 	{
 		var fullurl = "https://branchster.app.link/?~campaign=organic";
