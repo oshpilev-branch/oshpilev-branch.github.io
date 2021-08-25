@@ -37,12 +37,12 @@
 	else if (str.indexOf("_branch_match_id") >= 0)
 	{
 		//split out the value between ? and branch_match_id
-		const campaign = url.get('utm_campaign');
-		const channel = url.get('utm_source'); 
-		const medium = url.get('utm_medium');
-		//var params = str.split('_branch_match_id');
+		//const campaign = url.get('utm_campaign');
+		//const channel = url.get('utm_source'); 
+		//const medium = url.get('utm_medium');
+		var params = str.split('&')[1];
 		// build a link
-		var fullurl = "https://branchster.app.link/?utm_campaign" + campaign + "&utm_channel=" + channel + "&utm_medium=" + medium;
+		var fullurl = "https://branchster.app.link/?" + params;
 	}
 	else 
 	{
