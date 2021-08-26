@@ -36,7 +36,7 @@
 	// for cases where _branch_match_id is first
 	else if (str.indexOf("_branch_match_id") >= 0)
 	{
-		//split out the value between ? and branch_match_id
+		//take all query param value after the _branch_match_id
 		var params = str.substring(str.indexOf('&') + 1);
 		// build a link
 		var fullurl = "https://branchster.app.link/?" + params;
