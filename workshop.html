@@ -21,7 +21,7 @@
 
     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId".split(" "), 0);
 
-    branch.init('key_live_aoOslOs9SUF0sGxKG4cKcghgvskpTY0b', function(err, data) {
+    branch.init('key_live_nkLcpSYLMz7xK1DcmuinVefnxCmbQFUi', function(err, data) {
         console.log(data);
         branch.setBranchViewData({
             data:{
@@ -93,6 +93,8 @@
                         <a href="https://oleg.app.link/helloworld">Click this link to open app</a>
                         <button onclick="launchBranchJourney()" onmouseover="" style="cursor: pointer; border-radius: 12px; background-color: #008CBA; border: none; color: white; padding: 12px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); width:100%; margin: 5px 0px 5px 0px;">Launch Banner</button>
                         <button onclick="closeBranchJourney()" onmouseover="" style="cursor: pointer; border-radius: 12px; background-color: #008CBA; border: none; color: white; padding: 12px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); width:100%; margin: 5px 0px 5px 0px;">Close Banner</button>
+			<button onclick="subEvent()" onmouseover="" style="cursor: pointer; border-radius: 12px; background-color: #008CBA; border: none; color: white; padding: 12px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); width:100%; margin: 5px 0px 5px 0px;">Fire Sub Event</button>
+
                     </div>
                 </div>
             </div>
@@ -195,6 +197,18 @@
     // function for button to close journey (will NOT activate template's dismissal period)
     function closeBranchJourney(){
         branch.closeJourney(function(err) {});
+    }
+	    
+	function subEvent(){
+        branch.setIdentity("TEST");
+       branch.logEvent(
+        "SUBSCRIBE",
+         {},
+         {},
+        "Oleg Alias",
+        function(err) { console.log(err); }
+     );
+
     }
 
     // function to create a link via the web SDK
