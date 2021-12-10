@@ -206,6 +206,7 @@
     // function for button to close journey (will NOT activate template's dismissal period)
     function closeBranchJourney(){
         branch.closeJourney(function(err) {});
+	branch.disableTracking(false);
     }
 
     // function to create a link via the web SDK
