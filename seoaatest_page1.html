@@ -24,9 +24,14 @@ var referrer = document.referrer;
 console.log("The referrer is " + referrer);
 
 var googleRegexReferrer = new RegExp("(.*)www\\.google\\.(.*)");
+var bingRegexReferrer = new RegExp("(.*)www\\.bing\\.(.*)");
+var yahooRegexReferrer = new RegExp("(.*)search\\.yahoo\\.(.*)");
+var yandexRegexReferrer = new RegExp("(.*)www\\.yandex\\.(.*)");
+var duckduckgoRegexReferrer = new RegExp("(.*)www\\.duckduckgo\\.(.*)");
+var askRegexReferrer = new RegExp("(.*)\\.ask\\.com(.*)");
 
 
-if (referrer == null) {
+if (!referrer) {
 	console.log("EMPRTY REFERRER");
 } else if (referrer.match(googleRegexReferrer)) {
 	console.log("GOOGLE REFERRER");
