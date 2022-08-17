@@ -23,7 +23,7 @@
 var referrer = document.referrer;
 console.log("The referrer is " + referrer);
 
-var googleRegexReferrer = "(.*)www\\.google\\.(.*)";
+var googleRegexReferrer = new RegExp("(.*)www\\.google\\.(.*)");
 
 
 if (referrer.test(googleRegexReferrer)) {
