@@ -26,7 +26,7 @@ console.log("The referrer is " + referrer);
 var googleRegexReferrer = "(.*)www\\.google\\.(.*)";
 
 
-if (referrer = googleRegexReferrer) {
+if (referrer.test(googleRegexReferrer)) {
 	console.log("GOOGLE REFERRER");
 } else {
 	console.log("SOME OTHER REFERRER");
