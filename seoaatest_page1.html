@@ -35,10 +35,13 @@ if (!referrer) {
 	console.log("EMPRTY REFERRER");
 } else if (referrer.match(googleRegexReferrer)) {
 	console.log("GOOGLE REFERRER");
+	branch.logEvent(
+    'SEO_EVENT',
+    function(err) { console.log(err); }
+);
 } else {
 	console.log("SOME OTHER REFERRER");
 }
-
 
 
 
