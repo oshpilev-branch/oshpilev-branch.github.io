@@ -15,48 +15,17 @@
 </style></head>
 <body>
 <script>
-	const url = new URLSearchParams(window.location.search);
-	const str = String(url);
+// load Branch
+     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking qrCode".split(" "), 0);
+     // init Branch
+     branch.init('key_live_nkLcpSYLMz7xK1DcmuinVefnxCmbQFUi');
 	
-	if  (str.indexOf("_branch_match_id") >= 0 && str.indexOf("%243p") >= 0)
-	{	
-		//split out the value between 3p and branch_match_id
-		var params = str.split('%243p').pop().split('&_branch_match_id')[0];
-		// build a link
-		var fullurl = "https://branchster.app.link/?%243p" + params;
-	} 
-	// for cases where _branch_match_id is last
-	else if (str.indexOf("&_branch_match_id") >= 0)
-	{
-		//split out the value between ? and branch_match_id
-		var params = str.split('?').pop().split('&_branch_match_id')[0];
-		// build a link
-		var fullurl = "https://branchster.app.link/?" + params;	
-	} 
-	// for cases where _branch_match_id is first
-	else if (str.indexOf("_branch_match_id") >= 0)
-	{
-		//take all query param value after the _branch_match_id
-		var params = str.substring(str.indexOf('&') + 1);
-		// build a link
-		var fullurl = "https://branchster.app.link/?" + params;
-	}
-	else 
-	{
-		var fullurl = "https://branchster.app.link/?~campaign=organic";
-	}
-
 
  </script>
 
-<h1>Parameter Carryover Testing</h1>
+<h1>SEOAA 2ND PAGE</h1>
 
 <body>
-<a href="" id="fullurl" class="button">Go to App</a>
-<script>
-document.getElementById("fullurl").href = fullurl;
-</script>
-
 </body>
 
 
