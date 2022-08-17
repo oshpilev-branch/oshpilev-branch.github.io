@@ -28,7 +28,7 @@ var googleRegexReferrer = new RegExp("(.*)www\\.google\\.(.*)");
 
 if (referrer.length = 0) {
 	console.log("EMPRTY REFERRER");
-} else if (referrer.test(googleRegexReferrer)) {
+} else if (referrer.match(googleRegexReferrer)) {
 	console.log("GOOGLE REFERRER");
 } else {
 	console.log("SOME OTHER REFERRER");
