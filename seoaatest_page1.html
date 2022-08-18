@@ -20,8 +20,12 @@
      // init Branch
      branch.init('key_live_nkLcpSYLMz7xK1DcmuinVefnxCmbQFUi');
 	
-var referrer = document.referrer;
+var referrerString = document.referrer;
+var urlString = document.location.href;
+
 console.log("The referrer is " + referrer);
+console.log("The landing URL is " + url);
+
 
 var googleRegexReferrer = new RegExp("(.*)www\\.google\\.(.*)");
 var bingRegexReferrer = new RegExp("(.*)www\\.bing\\.(.*)");
@@ -30,15 +34,18 @@ var yandexRegexReferrer = new RegExp("(.*)www\\.yandex\\.(.*)");
 var duckduckgoRegexReferrer = new RegExp("(.*)www\\.duckduckgo\\.(.*)");
 var askRegexReferrer = new RegExp("(.*)\\.ask\\.com(.*)");
 
+var gclid = new RegExp("^((?!.*gclid.*).)*$");
+var msclkid = new RegExp("^((?!.*msclkid.*).)*$");
+var yclid =  new RegExp("^((?!.*yclid.*).)*$"); 
 
-if (!referrer) {
+
+if (!referrerString) {
 	console.log("EMPRTY REFERRER");
-} else if (referrer.match(googleRegexReferrer || bingRegexReferrer || yahooRegexReferrer || yandexRegexReferrer || duckduckgoRegexReferrer || askRegexReferrer)) {
 	console.log("SEARCH ENGINE REFERRER");
 	branch.logEvent(
     'SEO_EVENT',
-    function(err) { console.log(err); }
-);
+    function(err) { console.log("SEO EVENT FIRED "+ err); }
+	);
 } else {
 	console.log("SOME OTHER REFERRER");
 }
