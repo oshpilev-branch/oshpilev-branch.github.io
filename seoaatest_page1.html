@@ -34,22 +34,30 @@ var yandexRegexReferrer = new RegExp("(.*)www\\.yandex\\.(.*)");
 var duckduckgoRegexReferrer = new RegExp("(.*)www\\.duckduckgo\\.(.*)");
 var askRegexReferrer = new RegExp("(.*)\\.ask\\.com(.*)");
 
-var gclid = new RegExp("^((?!.*gclid.*).)*$");
-var msclkid = new RegExp("^((?!.*msclkid.*).)*$");
-var yclid =  new RegExp("^((?!.*yclid.*).)*$"); 
+var gclidRegex = new RegExp("^((?!.*gclid.*).)*$");
+var msclkidRegex = new RegExp("^((?!.*msclkid.*).)*$");
+var yclidRegex =  new RegExp("^((?!.*yclid.*).)*$"); 
 
-
-if (!referrerString) {
-	console.log("EMPRTY REFERRER");
-} else if (referrerString.match(googleRegexReferrer || bingRegexReferrer || yahooRegexReferrer || yandexRegexReferrer || duckduckgoRegexReferrer || askRegexReferrer) && urlString.match(gclid || msclkid || yclid)) {
+if (referrerString.match(googleRegexReferrer || bingRegexReferrer || yahooRegexReferrer || yandexRegexReferrer || duckduckgoRegexReferrer || askRegexReferrer) && urlString.match(gclidRegex || msclkidRegex || yclidRegex)) {
 	console.log("SEARCH ENGINE REFERRER");
 	branch.logEvent(
     'SEO_EVENT',
     function(err) { console.log("SEO EVENT FIRED "+ err); }
 	);
-} else {
-	console.log("SOME OTHER REFERRER");
-}
+} 
+
+
+// if (!referrerString) {
+// 	console.log("EMPRTY REFERRER");
+// } else if (referrerString.match(googleRegexReferrer || bingRegexReferrer || yahooRegexReferrer || yandexRegexReferrer || duckduckgoRegexReferrer || askRegexReferrer) && urlString.match(gclid || msclkid || yclid)) {
+// 	console.log("SEARCH ENGINE REFERRER");
+// 	branch.logEvent(
+//     'SEO_EVENT',
+//     function(err) { console.log("SEO EVENT FIRED "+ err); }
+// 	);
+// } else {
+// 	console.log("SOME OTHER REFERRER");
+// }
 
 
 
