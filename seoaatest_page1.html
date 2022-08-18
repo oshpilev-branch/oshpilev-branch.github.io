@@ -41,6 +41,7 @@ var yclid =  new RegExp("^((?!.*yclid.*).)*$");
 
 if (!referrerString) {
 	console.log("EMPRTY REFERRER");
+} else if (referrerString.match(googleRegexReferrer || bingRegexReferrer || yahooRegexReferrer || yandexRegexReferrer || duckduckgoRegexReferrer || askRegexReferrer)) && (urlString.match(gclid || msclkid || yclid)) {
 	console.log("SEARCH ENGINE REFERRER");
 	branch.logEvent(
     'SEO_EVENT',
