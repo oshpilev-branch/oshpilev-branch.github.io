@@ -29,7 +29,8 @@ function forceClick(){
     //document.getElementById("branch-journey-cta").click();
     //document.getElementById("branch-mobile-action").click();
     console.log("we here")
-    document.getElementsByClassName("branch-banner-button").click(); 
+    //var iframe = document.getElementById("branch-banner-iframe");
+    document.getElementById("branch-banner-iframe").contentWindow.document.getElementById("branch-mobile-action").click(); 
 }
 	
 
