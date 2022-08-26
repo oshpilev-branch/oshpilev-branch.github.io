@@ -20,13 +20,16 @@
      // init Branch
      branch.init('key_live_nkLcpSYLMz7xK1DcmuinVefnxCmbQFUi');
      
-var value = branch.addListener('didShowJourney', listener);
+branch.addListener('didShowJourney', forceClick);
 
-console.log("VALUE" + value);
+console.log("VALUE " + value);
 
-if (listener = "didShowJourney"){
+function forceClick(){
+    if (listener = "didShowJourney"){
     document.getElementById("branch-mobile-action").click();
 }
+}
+
 
 //function forceClick(){
 //    document.getElementById("branch-mobile-action").click();
