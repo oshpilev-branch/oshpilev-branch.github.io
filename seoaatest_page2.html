@@ -20,9 +20,11 @@
      // init Branch
      branch.init('key_live_nkLcpSYLMz7xK1DcmuinVefnxCmbQFUi');
      
-branch.addListener('didShowJourney', forceClick);
+document.addEventListener('DOMContentLoaded', function () {
+    branch.addListener('didShowJourney', forceClick);
+}
 
-console.log("VALUE " + value);
+//console.log("VALUE " + value);
 
 function forceClick(){
     if (listener = "didShowJourney"){
